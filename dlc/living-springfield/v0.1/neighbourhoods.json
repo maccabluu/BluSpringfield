@@ -1,0 +1,91 @@
+{
+  "dlcId": "bluspringfield.living_springfield",
+  "version": "0.1.0",
+  "status": "prototype-not-integrated",
+  "neighbourhoods": [
+    {
+      "id": "maple_heights",
+      "name": "Maple Heights",
+      "theme": "Suburban gardens",
+      "unlock": {
+        "quest": "blu_quest_01"
+      },
+      "lots": 6,
+      "decorations": [
+        {
+          "id": "maple_flowerbed",
+          "name": "Flower Bed",
+          "cost": 75
+        },
+        {
+          "id": "maple_white_fence",
+          "name": "White Fence",
+          "cost": 40
+        },
+        {
+          "id": "maple_mailbox",
+          "name": "Neighbourhood Mailbox",
+          "cost": 60
+        }
+      ],
+      "buildings": [
+        "blu_cozy_cottage",
+        "blu_garden_shop"
+      ],
+      "quests": [
+        {
+          "id": "maple_welcome",
+          "title": "Welcome to Maple Heights",
+          "objective": "Place Cozy Cottage and 2 Flower Beds",
+          "reward": {
+            "xp": 90,
+            "currency": 200
+          }
+        }
+      ]
+    },
+    {
+      "id": "market_square",
+      "name": "Market Square",
+      "theme": "Local shops and community",
+      "unlock": {
+        "quest": "blu_quest_03"
+      },
+      "lots": 8,
+      "decorations": [
+        {
+          "id": "market_bench",
+          "name": "Park Bench",
+          "cost": 100
+        },
+        {
+          "id": "market_planter",
+          "name": "Street Planter",
+          "cost": 85
+        },
+        {
+          "id": "market_lamp",
+          "name": "Street Lamp",
+          "cost": 125
+        }
+      ],
+      "buildings": [
+        "blu_community_hall",
+        "blu_cafe",
+        "blu_furniture_store"
+      ],
+      "quests": [
+        {
+          "id": "market_open",
+          "title": "Open for Business",
+          "objective": "Build Corner Café and place 2 Street Lamps",
+          "reward": {
+            "xp": 120,
+            "currency": 250
+          }
+        }
+      ]
+    }
+  ],
+  "implementationNotes": "Data definitions only. These do not unlock actual land or appear in the APK until mapped to original game schemas and tested. Outdoor-only; no indoor decorating."
+}
