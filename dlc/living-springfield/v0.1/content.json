@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "status": "prototype-not-integrated",
   "title": "Living Springfield",
-  "description": "Original DLC content definitions. Not yet compatible with the game client.",
+  "description": "Outdoor town-building DLC. No playable interiors or indoor furniture decorating.",
   "currency": "soft",
   "buildings": [
     {
@@ -37,33 +37,7 @@
       "buildTimeSeconds": 150
     }
   ],
-  "furniture": [
-    {
-      "id": "blu_blue_sofa",
-      "name": "Blue Sofa",
-      "cost": 150
-    },
-    {
-      "id": "blu_coffee_table",
-      "name": "Coffee Table",
-      "cost": 75
-    },
-    {
-      "id": "blu_floor_lamp",
-      "name": "Floor Lamp",
-      "cost": 90
-    },
-    {
-      "id": "blu_bookcase",
-      "name": "Bookcase",
-      "cost": 180
-    },
-    {
-      "id": "blu_rug",
-      "name": "Patterned Rug",
-      "cost": 100
-    }
-  ],
+  "furniture": [],
   "quests": [
     {
       "id": "blu_quest_01",
@@ -75,15 +49,6 @@
       }
     },
     {
-      "id": "blu_quest_02",
-      "title": "Make Yourself at Home",
-      "objective": "Place three furniture items",
-      "reward": {
-        "xp": 75,
-        "currency": 150
-      }
-    },
-    {
       "id": "blu_quest_03",
       "title": "Meet the Neighbours",
       "objective": "Build Neighbourhood Hall",
@@ -91,10 +56,19 @@
         "xp": 100,
         "currency": 250
       }
+    },
+    {
+      "id": "blu_quest_02",
+      "title": "Spruce Up the Street",
+      "objective": "Place three outdoor garden decorations",
+      "reward": {
+        "xp": 75,
+        "currency": 150
+      }
     }
   ],
   "featuresPlanned": [
-    "interior decoration",
+    "outdoor town decorations",
     "character friendships",
     "gardening",
     "weather"
