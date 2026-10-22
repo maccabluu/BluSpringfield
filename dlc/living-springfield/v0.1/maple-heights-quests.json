@@ -1,0 +1,104 @@
+{
+  "pack": "living-springfield-maple-heights",
+  "version": "0.1.0",
+  "status": "prototype-not-integrated",
+  "quests": [
+    {
+      "id": "maple_01",
+      "title": "A Fresh Start",
+      "dialogue": [
+        "Springfield could use a neighbourhood with a little more greenery.",
+        "First things first: let's get a cottage built."
+      ],
+      "tasks": [
+        {
+          "type": "build",
+          "target": "blu_cozy_cottage",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "currency": 150,
+        "xp": 60
+      },
+      "next": "maple_02"
+    },
+    {
+      "id": "maple_02",
+      "title": "Bloom Where You're Planted",
+      "dialogue": [
+        "Those lawns look a bit bare. Time for some colour!"
+      ],
+      "tasks": [
+        {
+          "type": "place",
+          "target": "maple_flowerbed",
+          "count": 3
+        }
+      ],
+      "rewards": {
+        "currency": 180,
+        "xp": 75
+      },
+      "next": "maple_03"
+    },
+    {
+      "id": "maple_03",
+      "title": "Good Fences",
+      "dialogue": [
+        "A few fences should make this street look a little more welcoming."
+      ],
+      "tasks": [
+        {
+          "type": "place",
+          "target": "maple_white_fence",
+          "count": 5
+        }
+      ],
+      "rewards": {
+        "currency": 200,
+        "xp": 85
+      },
+      "next": "maple_04"
+    },
+    {
+      "id": "maple_04",
+      "title": "You've Got Mail",
+      "dialogue": [
+        "A proper neighbourhood needs somewhere for all those bills to arrive."
+      ],
+      "tasks": [
+        {
+          "type": "place",
+          "target": "maple_mailbox",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "currency": 125,
+        "xp": 70
+      },
+      "next": "maple_05"
+    },
+    {
+      "id": "maple_05",
+      "title": "Grand Opening",
+      "dialogue": [
+        "Now let's give everyone a reason to visit Maple Heights."
+      ],
+      "tasks": [
+        {
+          "type": "build",
+          "target": "blu_garden_shop",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "currency": 350,
+        "xp": 150
+      },
+      "next": null
+    }
+  ],
+  "notes": "Original draft dialogue, not assigned to existing copyrighted characters. Requires mapping into the game's supported quest schema; no APK integration yet."
+}
