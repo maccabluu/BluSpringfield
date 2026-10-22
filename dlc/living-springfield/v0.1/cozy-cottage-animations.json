@@ -1,0 +1,97 @@
+{
+  "assetId": "blu_cozy_cottage",
+  "version": "0.1.0",
+  "status": "prototype-timelines-not-engine-integrated",
+  "coordinateSystem": "normalized-local",
+  "animations": [
+    {
+      "id": "chimney_smoke",
+      "trigger": "ambient",
+      "loop": true,
+      "framesPerSecond": 8,
+      "durationMs": 1600,
+      "layers": [
+        {
+          "id": "smoke",
+          "anchor": {
+            "x": 0.25,
+            "y": 0.12
+          },
+          "frames": [
+            {
+              "timeMs": 0,
+              "offsetY": 0,
+              "opacity": 0,
+              "scale": 0.6
+            },
+            {
+              "timeMs": 400,
+              "offsetY": -0.03,
+              "opacity": 0.7,
+              "scale": 0.85
+            },
+            {
+              "timeMs": 900,
+              "offsetY": -0.08,
+              "opacity": 0.5,
+              "scale": 1.1
+            },
+            {
+              "timeMs": 1600,
+              "offsetY": -0.15,
+              "opacity": 0,
+              "scale": 1.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "front_door",
+      "trigger": "character_task_start_or_end",
+      "loop": false,
+      "durationMs": 1100,
+      "layers": [
+        {
+          "id": "door",
+          "anchor": {
+            "x": 0.56,
+            "y": 0.72
+          },
+          "frames": [
+            {
+              "timeMs": 0,
+              "pose": "closed"
+            },
+            {
+              "timeMs": 200,
+              "pose": "opening"
+            },
+            {
+              "timeMs": 400,
+              "pose": "open"
+            },
+            {
+              "timeMs": 700,
+              "pose": "open"
+            },
+            {
+              "timeMs": 900,
+              "pose": "closing"
+            },
+            {
+              "timeMs": 1100,
+              "pose": "closed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "implementationNotes": [
+    "Animation timing and anchors are draft values, not measured from the client.",
+    "Requires isolated transparent smoke frames and door-open sprites consistent with the final building asset.",
+    "Map triggers and sprite animation metadata to the existing game engine before packaging.",
+    "No working animation is present in the APK yet."
+  ]
+}
