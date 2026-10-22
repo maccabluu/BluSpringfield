@@ -1,0 +1,94 @@
+{
+  "pack": "living-springfield-maple-heights",
+  "version": "0.1.0",
+  "status": "asset-specifications-only",
+  "artDirection": {
+    "view": "isometric 2D",
+    "outlines": "bold clean dark outlines",
+    "shading": "flat cel shading",
+    "palette": "bright saturated cartoon colours",
+    "target": "match existing Tapped Out game art proportions using authorized in-game references",
+    "requirements": [
+      "transparent sprite backgrounds",
+      "consistent isometric angle",
+      "separate construction and completed states for buildings",
+      "avoid changing original assets"
+    ]
+  },
+  "assets": [
+    {
+      "id": "blu_cozy_cottage",
+      "kind": "building",
+      "footprintTiles": [
+        6,
+        5
+      ],
+      "sprites": [
+        "idle",
+        "construction"
+      ],
+      "animation": "optional chimney smoke",
+      "fileStem": "buildings/cozy_cottage"
+    },
+    {
+      "id": "blu_garden_shop",
+      "kind": "building",
+      "footprintTiles": [
+        6,
+        5
+      ],
+      "sprites": [
+        "idle",
+        "construction"
+      ],
+      "fileStem": "buildings/garden_shop"
+    },
+    {
+      "id": "maple_flowerbed",
+      "kind": "decoration",
+      "footprintTiles": [
+        2,
+        1
+      ],
+      "sprites": [
+        "idle"
+      ],
+      "fileStem": "decorations/flowerbed"
+    },
+    {
+      "id": "maple_white_fence",
+      "kind": "decoration",
+      "footprintTiles": [
+        1,
+        1
+      ],
+      "sprites": [
+        "straight",
+        "corner"
+      ],
+      "fileStem": "decorations/white_fence"
+    },
+    {
+      "id": "maple_mailbox",
+      "kind": "decoration",
+      "footprintTiles": [
+        1,
+        1
+      ],
+      "sprites": [
+        "idle"
+      ],
+      "fileStem": "decorations/mailbox"
+    }
+  ],
+  "integration": {
+    "state": "blocked-pending-client-format-inspection",
+    "required": [
+      "identify supported sprite atlas and metadata formats",
+      "map item identifiers to game definitions",
+      "validate footprint against existing grid",
+      "package and test on Android build"
+    ],
+    "note": "Footprints and file stems are design placeholders, not verified engine values. No image assets or playable APK are included."
+  }
+}
