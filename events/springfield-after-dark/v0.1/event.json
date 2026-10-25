@@ -1,0 +1,124 @@
+{
+  "id": "bluspringfield.springfield_after_dark",
+  "version": "0.1.0",
+  "status": "prototype-not-integrated",
+  "title": "Springfield After Dark",
+  "subtitle": "The First BluSpringfield Event",
+  "description": "A 14-day, offline-friendly Halloween town event focused on outdoor jobs, wandering ghosts, quests and unlockable town decorations.",
+  "eventNumber": 1,
+  "durationDays": 14,
+  "startMode": "local-player-activation",
+  "endBehavior": "stop earning event candy; keep all unlocked rewards and decorations",
+  "eligibility": {
+    "suggestedTownLevel": 5,
+    "levelGateVerified": false
+  },
+  "currency": {
+    "id": "event_candy",
+    "name": "Halloween Candy",
+    "icon": "candy",
+    "progression": "cumulative-earned",
+    "spendOnPrizes": false
+  },
+  "collection": {
+    "tappable": {
+      "id": "wandering_ghost",
+      "rewardCandy": 5,
+      "respawnSeconds": 600,
+      "maxVisible": 5
+    },
+    "dailyBonus": {
+      "rewardCandy": 50,
+      "cooldownSeconds": 86400
+    }
+  },
+  "jobs": [
+    {
+      "id": "homer_decorations",
+      "character": "homer",
+      "title": "Inspect the Halloween Decorations",
+      "durationSeconds": 3600,
+      "rewardCandy": 15
+    },
+    {
+      "id": "bart_trick_or_treat",
+      "character": "bart",
+      "title": "Investigate the Haunted Street",
+      "durationSeconds": 3600,
+      "rewardCandy": 15
+    },
+    {
+      "id": "lisa_science",
+      "character": "lisa",
+      "title": "Research Strange Noises",
+      "durationSeconds": 14400,
+      "rewardCandy": 50
+    },
+    {
+      "id": "marge_stall",
+      "character": "marge",
+      "title": "Organise the Candy Stall",
+      "durationSeconds": 14400,
+      "rewardCandy": 50
+    },
+    {
+      "id": "flanders_watch",
+      "character": "flanders",
+      "title": "Keep Watch for Ghosts",
+      "durationSeconds": 28800,
+      "rewardCandy": 90
+    }
+  ],
+  "prizeTrack": [
+    {
+      "id": "reward_01",
+      "atCandy": 50,
+      "itemId": "sad_jack_o_lantern",
+      "quantity": 1
+    },
+    {
+      "id": "reward_02",
+      "atCandy": 150,
+      "itemId": "sad_cobweb_fence",
+      "quantity": 4
+    },
+    {
+      "id": "reward_03",
+      "atCandy": 300,
+      "itemId": "sad_ghost_tree",
+      "quantity": 1
+    },
+    {
+      "id": "reward_04",
+      "atCandy": 600,
+      "itemId": "sad_haunted_snack_shack",
+      "quantity": 1
+    },
+    {
+      "id": "reward_05",
+      "atCandy": 900,
+      "itemId": "sad_vampire_bart",
+      "quantity": 1
+    }
+  ],
+  "questFile": "quests.json",
+  "assetManifestFile": "asset-manifest.json",
+  "saveState": {
+    "scope": "local-device",
+    "requiredFields": [
+      "startedAt",
+      "earnedCandy",
+      "jobTimers",
+      "ghostCooldown",
+      "lastDailyBonusAt",
+      "questProgress",
+      "currentQuestId",
+      "claimedPrizeIds",
+      "inventory",
+      "placedObjects",
+      "completedQuestIds"
+    ],
+    "storageAdapter": "game-native local saves; browser prototype uses localStorage"
+  },
+  "integrationNotes": "Standalone event content definitions only. The real Android client, quest runtime and assets are not present in this repository. Requires integration and testing before playable in the APK. No external server is required by this design."
+}
