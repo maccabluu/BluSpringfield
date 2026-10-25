@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BluSpringfield | Springfield After Dark</title>
+<style>
+:root{color-scheme:dark;--bg:#111126;--panel:#22203c;--panel2:#2d294d;--border:#514774;--text:#f7f3ff;--muted:#c4bfd9;--yellow:#ffdc67;--violet:#aa91ff;--green:#86e8b8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.4}button{font:inherit;cursor:pointer;border:0;border-radius:10px;padding:10px 14px;background:var(--yellow);color:#1f1732;font-weight:800}button:disabled{cursor:not-allowed;opacity:.48}button.secondary{background:#52466f;color:white}button:focus-visible,input:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.app{width:min(1120px,94%);margin:auto;padding:22px 0 60px}header{position:relative;overflow:hidden;border:2px solid #7b5798;border-radius:22px;padding:26px;background:linear-gradient(125deg,#242041,#53346a 60%,#262b58)}.moon{position:absolute;right:35px;top:24px;width:100px;height:100px;border-radius:50%;background:#ffd98b;box-shadow:0 0 45px #f6bf70aa;pointer-events:none}.skyline{position:absolute;right:0;bottom:0;font-size:72px;opacity:.25;letter-spacing:-16px;pointer-events:none}header h1{position:relative;margin:8px 0;font-size:clamp(30px,5vw,48px);line-height:1.07;text-shadow:3px 3px #23182f;max-width:660px}header p{position:relative;max-width:690px;color:#f6e9ff}header .tag{position:relative;display:inline-block;border:1px solid #d9b3fa;border-radius:100px;padding:5px 10px;background:#2b2544;font-size:12px;font-weight:800;letter-spacing:.08em}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:16px}.metrics{display:flex;gap:12px;flex-wrap:wrap}.pill{display:inline-flex;align-items:center;gap:8px;background:#1a1932ee;border:1px solid #68567f;padding:9px 14px;border-radius:100px;font-weight:700}.pill strong{color:var(--yellow)}.layout{display:grid;grid-template-columns:minmax(280px,1fr) minmax(320px,1.08fr);gap:16px;margin-top:16px}.panel{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:19px;min-width:0}.panel h2{margin:0 0 13px;font-size:20px}.panel h3{margin:0 0 8px;font-size:16px}.muted{color:var(--muted);font-size:14px}.story{border-left:4px solid var(--violet);padding-left:12px;margin:12px 0}.story p{margin:8px 0}.task{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #49425e;padding:9px 0}.task span:last-child{font-weight:800;color:var(--yellow);white-space:nowrap}.task.done span:last-child{color:var(--green)}.job{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #49425e}.job small{display:block;color:var(--muted)}.job button{flex-shrink:0}.group{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.prize{display:grid;grid-template-columns:55px 1fr auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #49425e}.prize .emoji{font-size:33px}.prize small{display:block;color:var(--muted)}.town{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:5px;margin-top:15px}.tile{aspect-ratio:1;min-width:0;padding:0;font-size:clamp(16px,3vw,30px);border:1px solid #61775c;background:#2e564c;color:white;border-radius:6px}.tile:hover:enabled{background:#437966}.tile.occupied{background:#4c4f6b;cursor:default}.inventory{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.inventory button{background:#665081;color:white;border:2px solid transparent}.inventory button.selected{border-color:var(--yellow);background:#4a3575}.full{grid-column:1/-1}.progress{height:12px;background:#393050;border-radius:30px;overflow:hidden;margin:8px 0 14px}.progress>span{display:block;height:100%;background:linear-gradient(90deg,#ab8cff,#ffdf67);transition:width .2s}.feedback{min-height:22px;color:var(--green);font-weight:700;font-size:14px}.preview-controls{margin:18px 0 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:14px}.preview-controls label{display:flex;align-items:center;gap:8px;cursor:pointer}.preview-controls input{accent-color:#ffdc67;width:17px;height:17px}.foot{margin-top:18px;font-size:12px;color:var(--muted)}@media(max-width:770px){.layout{grid-template-columns:1fr}.prize{grid-template-columns:44px 1fr auto}.moon{opacity:.35;right:10px}.job{flex-wrap:wrap}.job button{width:100%}}
+</style>
+</head>
+<body>
+<main class="app">
+<header>
+<div class="moon" aria-hidden="true"></div><div class="skyline" aria-hidden="true">🏠 🏚️ 🏠</div>
+<div class="tag">BLUSPRINGFIELD • EVENT 001</div>
+<h1>🌙 Springfield After Dark</h1>
+<p>Homer has lost the emergency candy. Bart has seen ghosts. Springfield has fourteen days to get Halloween back under control.</p>
+<div class="topline"><div class="metrics"><div class="pill">🍬 Candy <strong id="candy">0</strong></div><div class="pill">⏳ <strong id="time">Not started</strong></div></div><button id="start">Start event</button></div>
+</header>
+<div class="preview-controls"><label><input id="demo" type="checkbox" checked> Preview mode: finish jobs instantly</label><button class="secondary" id="reset">Reset preview</button><span id="message" class="feedback" role="status"></span></div>
+<div class="layout">
+<section class="panel"><h2>📖 Event storyline</h2><div id="quest"></div></section>
+<section class="panel"><h2>👻 Catch wandering ghosts</h2><p class="muted">Tap a ghost around town to earn 5 candy. The live design respawns them every 10 minutes. Preview mode skips the wait.</p><div class="group"><button id="ghost">👻 Catch ghost (+5 🍬)</button><button id="daily" class="secondary">🎁 Daily bonus (+50 🍬)</button></div><p class="feedback" id="ghost-status"></p></section>
+<section class="panel"><h2>🎭 Character jobs</h2><div id="jobs"></div></section>
+<section class="panel"><h2>🏆 Halloween prizes</h2><p class="muted">Prizes use total candy earned. Claiming a prize does not spend candy.</p><div class="progress"><span id="progress"></span></div><div id="prizes"></div></section>
+<section class="panel full"><h2>🏘️ Your spooky Springfield</h2><p class="muted">Claim a prize, select an item below, then choose an empty outdoor tile to place the decoration. The grid is a prototype and does not represent real building footprints.</p><div id="inventory" class="inventory"></div><div id="town" class="town" aria-label="Outdoor town preview"></div><p class="muted" id="town-note"></p></section>
+</div><p class="foot">Offline browser prototype. Local progress is saved in this browser. No actual Simpsons sprites or Android game files are included. The event is not yet integrated into the APK.</p>
+</main>
+<script>
+(function(){
+"use strict";
+var KEY="bluspringfield-event001-v01",DAY=86400000,selected=null,notice="";
+var prizes=[
+{id:"reward_01",at:50,item:"sad_jack_o_lantern",qty:1,label:"Glowing Jack-o'-Lantern",emoji:"🎃"},
+{id:"reward_02",at:150,item:"sad_cobweb_fence",qty:4,label:"Cobweb Fence (4)",emoji:"🕸️"},
+{id:"reward_03",at:300,item:"sad_ghost_tree",qty:1,label:"Ghost Tree",emoji:"🌳"},
+{id:"reward_04",at:600,item:"sad_haunted_snack_shack",qty:1,label:"Haunted Snack Shack",emoji:"🏚️"},
+{id:"reward_05",at:900,item:"sad_vampire_bart",qty:1,label:"Vampire Bart Costume",emoji:"🧛"}
+];
+var jobs=[
+{id:"homer_decorations",character:"Homer",title:"Inspect the Halloween Decorations",seconds:3600,candy:15,emoji:"🍩"},
+{id:"bart_trick_or_treat",character:"Bart",title:"Investigate the Haunted Street",seconds:3600,candy:15,emoji:"🛹"},
+{id:"lisa_science",character:"Lisa",title:"Research Strange Noises",seconds:14400,candy:50,emoji:"🔬"},
+{id:"marge_stall",character:"Marge",title:"Organise the Candy Stall",seconds:14400,candy:50,emoji:"🍬"},
+{id:"flanders_watch",character:"Flanders",title:"Keep Watch for Ghosts",seconds:28800,candy:90,emoji:"🔦"}
+];
+var quests=[
+{id:"sad_01",title:"A Night to Forget",lines:["Homer: I put the emergency Halloween candy somewhere safe. In my stomach.","Lisa: Dad, Springfield is filling up with ghosts. We have bigger problems."],tasks:[["complete_job","homer_decorations",1,"Homer: inspect decorations"]],reward:25},
+{id:"sad_02",title:"Ghosts on Evergreen Terrace",lines:["Bart: If those ghosts are fake, why did one steal my skateboard?","Homer: Maybe it needed a faster getaway."],tasks:[["complete_job","bart_trick_or_treat",1,"Bart: investigate the street"],["tap","wandering_ghost",3,"Catch 3 ghosts"]],reward:35},
+{id:"sad_03",title:"A Fright for Flanders",lines:["Flanders: Okily-dokily! Was that a floating bedsheet outside my window?","Bart: Only one way to find out."],tasks:[["complete_job","flanders_watch",1,"Flanders: keep watch"],["place","sad_jack_o_lantern",1,"Place your pumpkin"]],reward:50},
+{id:"sad_04",title:"The Science of Scaring",lines:["Lisa: The town needs evidence, not more rumours.","Homer: Evidence tastes worse than candy."],tasks:[["complete_job","lisa_science",1,"Lisa: research noises"],["reach_candy","event_candy",200,"Earn 200 candy in total"]],reward:65},
+{id:"sad_05",title:"Cobwebs and Chaos",lines:["Marge: If everyone insists on a Halloween festival, somebody needs to organise it.","Homer: I volunteer to taste-test every sweet."],tasks:[["complete_job","marge_stall",1,"Marge: organise the stall"],["claim_prize","reward_02",1,"Claim the cobweb fence prize"]],reward:80},
+{id:"sad_06",title:"Springfield After Dark",lines:["Bart: Now this looks like a proper haunted Springfield!","Lisa: It looks more like somebody forgot to turn the streetlights on."],tasks:[["tap","wandering_ghost",10,"Catch 10 ghosts in total"],["place","sad_ghost_tree",1,"Place the Ghost Tree"]],reward:125}
+];
+function fresh(){return{startedAt:null,candy:0,counts:{},claimed:[],inventory:{},placed:[],jobTimers:{},lastGhostAt:0,lastDailyAt:0,questIndex:0,completedQuests:[]};}
+var state=fresh();
+try{var existing=JSON.parse(localStorage.getItem(KEY)||"null");if(existing&&typeof existing==="object"){state=Object.assign(fresh(),existing);}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+function el(id){return document.getElementById(id);}
+function running(){return !!state.startedAt&&Date.now()<state.startedAt+14*DAY;}
+function started(){return !!state.startedAt;}
+function info(s){notice=s;el("message").textContent=s;}
+function addCandy(n){state.candy+=n;}
+function incr(type,target,n){var key=type+":"+target;state.counts[key]=(state.counts[key]||0)+(n||1);}
+function taskCount(t){if(t[0]==="reach_candy")return state.candy;return state.counts[t[0]+":"+t[1]]||0;}
+function formatTime(ms){if(ms<=0)return"Ready";var s=Math.ceil(ms/1000),h=Math.floor(s/3600),m=Math.floor(s%3600/60);return h?h+"h "+m+"m":m?m+"m "+s%60+"s":s+"s";}
+function claimPrize(id){if(!started())return;var p=prizes.find(function(x){return x.id===id;});if(!p||state.candy<p.at||state.claimed.indexOf(id)!==-1)return;state.claimed.push(id);incr("claim_prize",id,1);state.inventory[p.item]=(state.inventory[p.item]||0)+p.qty;info("Prize unlocked: "+p.label);save();render();}
+function completeQuest(){if(!running()||state.questIndex>=quests.length)return;var q=quests[state.questIndex];if(!q.tasks.every(function(t){return taskCount(t)>=t[2];}))return;state.completedQuests.push(q.id);addCandy(q.reward);if(q.id==="sad_06"){state.inventory.sad_event_plaque=(state.inventory.sad_event_plaque||0)+1;}state.questIndex++;info(q.id==="sad_06"?"Event story complete! Your plaque is in the inventory.":"Quest complete! +"+q.reward+" candy");save();render();}
+function collectFinished(forceId){if(!started())return;var changed=false;jobs.forEach(function(j){var timer=state.jobTimers[j.id];if(timer&&((forceId===j.id)||Date.now()>=timer)){delete state.jobTimers[j.id];incr("complete_job",j.id,1);addCandy(j.candy);info(j.character+" finished their job. +"+j.candy+" candy");changed=true;}});if(changed)save();}
+function jobClick(id){if(!running())return;var j=jobs.find(function(x){return x.id===id;});if(!j)return;if(state.jobTimers[id]){if(el("demo").checked){collectFinished(id);}else{collectFinished();}}else{state.jobTimers[id]=Date.now()+j.seconds*1000;info(j.character+" started working");save();}render();}
+function catchGhost(){if(!running())return;var cooldown=el("demo").checked?0:600000;if(Date.now()-state.lastGhostAt<cooldown)return;state.lastGhostAt=Date.now();incr("tap","wandering_ghost",1);addCandy(5);info("You caught a ghost! +5 candy");save();render();}
+function daily(){if(!running()||Date.now()-state.lastDailyAt<DAY)return;state.lastDailyAt=Date.now();addCandy(50);info("Daily Halloween candy collected! +50");save();render();}
+function selectItem(id){selected=id;render();}
+function place(cell){if(!selected||!started())return;if(state.placed.some(function(x){return x.cell===cell;}))return;if((state.inventory[selected]||0)<=0)return;if(selected==="sad_vampire_bart"){info("Costumes unlock on the character screen in the actual game.");return;}state.placed.push({cell:cell,item:selected});state.inventory[selected]--;incr("place",selected,1);info("Placed decoration in Springfield");if(!state.inventory[selected])selected=null;save();render();}
+function make(tag,cls,content){var x=document.createElement(tag);if(cls)x.className=cls;if(content!==undefined)x.textContent=content;return x;}
+function renderQuest(){var box=el("quest");box.replaceChildren();if(!started()){box.append(make("p","muted","Start the event to meet the first quest."));return;}if(state.questIndex>=quests.length){box.append(make("h3","", "🎉 Story complete!"));box.append(make("p","muted","You earned the commemorative plaque. Keep collecting candy to finish the prize track."));return;}
+var q=quests[state.questIndex];box.append(make("p","muted","PART "+(state.questIndex+1)+" OF "+quests.length));box.append(make("h3","",q.title));var story=make("div","story");q.lines.forEach(function(line){story.append(make("p","",line));});box.append(story);
+q.tasks.forEach(function(t){var n=taskCount(t),done=n>=t[2],r=make("div","task"+(done?" done":""));r.append(make("span","",t[3]));r.append(make("span","",Math.min(n,t[2])+" / "+t[2]));box.append(r);});
+var button=make("button","",q.tasks.every(function(t){return taskCount(t)>=t[2];})?"Finish quest (+ "+q.reward+" 🍬)":"Complete tasks to continue");button.disabled=!running()||!q.tasks.every(function(t){return taskCount(t)>=t[2];});button.style.marginTop="14px";button.addEventListener("click",completeQuest);box.append(button);}
+function renderJobs(){var box=el("jobs");box.replaceChildren();jobs.forEach(function(j){var r=make("div","job");var left=make("div","");left.append(make("strong","",j.emoji+" "+j.character));left.append(make("small","",j.title+" • +"+j.candy+" candy"));var timer=state.jobTimers[j.id],btn=make("button",timer?"","");btn.textContent=timer?(el("demo").checked?"Finish now (preview)":formatTime(timer-Date.now())):"Start • "+(j.seconds/3600)+"h";btn.disabled=!running()||(!!timer&&!el("demo").checked&&Date.now()<timer);btn.addEventListener("click",function(){jobClick(j.id);});r.append(left,btn);box.append(r);});}
+function renderPrizes(){var box=el("prizes");box.replaceChildren();var pct=Math.min(100,Math.round(state.candy/900*100));el("progress").style.width=pct+"%";prizes.forEach(function(p){var r=make("div","prize");r.append(make("span","emoji",p.emoji));var copy=make("div","");copy.append(make("strong","",p.label));copy.append(make("small","",p.at+" candy total"));r.append(copy);var claimed=state.claimed.indexOf(p.id)!==-1,btn=make("button",claimed?"secondary":"","");btn.textContent=claimed?"Claimed":state.candy>=p.at?"Claim":"Locked";btn.disabled=claimed||state.candy<p.at||!started();btn.addEventListener("click",function(){claimPrize(p.id);});r.append(btn);box.append(r);});}
+var itemIcons={sad_jack_o_lantern:"🎃",sad_cobweb_fence:"🕸️",sad_ghost_tree:"🌳",sad_haunted_snack_shack:"🏚️",sad_vampire_bart:"🧛",sad_event_plaque:"🏆"};
+var itemNames={sad_jack_o_lantern:"Pumpkin",sad_cobweb_fence:"Fence",sad_ghost_tree:"Ghost Tree",sad_haunted_snack_shack:"Snack Shack",sad_vampire_bart:"Vampire Bart",sad_event_plaque:"Plaque"};
+function renderTown(){var inventory=el("inventory");inventory.replaceChildren();var available=Object.keys(state.inventory).filter(function(k){return state.inventory[k]>0;});if(!available.length)inventory.append(make("span","muted","Claim an unlocked reward to add town decorations."));available.forEach(function(id){var btn=make("button",selected===id?"selected":"",itemIcons[id]+" "+itemNames[id]+" x"+state.inventory[id]);btn.addEventListener("click",function(){selectItem(id);});inventory.append(btn);});var grid=el("town");grid.replaceChildren();for(var c=0;c<24;c++){(function(cell){var placed=state.placed.find(function(x){return x.cell===cell;}),t=make("button","tile"+(placed?" occupied":""),placed?itemIcons[placed.item]:"+");t.title=placed?itemNames[placed.item]:"Empty town tile "+(cell+1);t.disabled=!!placed||!selected;t.addEventListener("click",function(){place(cell);});grid.append(t);})(c);}el("town-note").textContent=selected?"Selected: "+itemNames[selected]+". Choose an empty green tile.":state.placed.length+" items placed in the outdoor town.";}
+function render(){el("candy").textContent=String(state.candy);el("time").textContent=!started()?"Not started":running()?formatTime(state.startedAt+14*DAY-Date.now())+" left":"Event ended";el("start").style.display=started()?"none":"inline-block";var ghostWait=Math.max(0,600000-(Date.now()-state.lastGhostAt));el("ghost").disabled=!running()||(!el("demo").checked&&ghostWait>0);el("ghost-status").textContent=(!el("demo").checked&&ghostWait>0)?"Next ghost in "+formatTime(ghostWait):"";el("daily").disabled=!running()||(state.lastDailyAt>0&&Date.now()-state.lastDailyAt<DAY);renderQuest();renderJobs();renderPrizes();renderTown();}
+el("start").addEventListener("click",function(){if(started())return;state.startedAt=Date.now();info("The Halloween event has started!");save();render();});
+el("ghost").addEventListener("click",catchGhost);el("daily").addEventListener("click",daily);el("demo").addEventListener("change",render);
+el("reset").addEventListener("click",function(){if(!window.confirm("Reset this preview's event progress?"))return;state=fresh();selected=null;info("Preview reset");save();render();});
+setInterval(function(){collectFinished();render();},1000);render();
+})();
+</script>
+</body></html>
