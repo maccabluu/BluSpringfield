@@ -1,0 +1,115 @@
+{
+  "pack": "bluspringfield.springfield_after_dark",
+  "version": "0.1.0",
+  "status": "asset-specifications-only",
+  "artDirection": {
+    "view": "isometric 2D",
+    "outlines": "clean bold cartoon outlines",
+    "shading": "flat cel shading",
+    "background": "transparent",
+    "reference": "match existing authorised game art and proportions",
+    "scope": "exterior town objects only; no indoor scenes or decorating"
+  },
+  "assets": [
+    {
+      "id": "wandering_ghost",
+      "kind": "tappable",
+      "footprintTiles": [
+        1,
+        1
+      ],
+      "states": [
+        "idle",
+        "tap",
+        "disappear"
+      ],
+      "animation": "short float loop"
+    },
+    {
+      "id": "sad_jack_o_lantern",
+      "kind": "decoration",
+      "footprintTiles": [
+        1,
+        1
+      ],
+      "states": [
+        "idle",
+        "glow"
+      ],
+      "fileStem": "decorations/jack_o_lantern"
+    },
+    {
+      "id": "sad_cobweb_fence",
+      "kind": "decoration",
+      "footprintTiles": [
+        1,
+        1
+      ],
+      "states": [
+        "straight",
+        "corner"
+      ],
+      "fileStem": "decorations/cobweb_fence"
+    },
+    {
+      "id": "sad_ghost_tree",
+      "kind": "decoration",
+      "footprintTiles": [
+        2,
+        2
+      ],
+      "states": [
+        "idle",
+        "sway"
+      ],
+      "fileStem": "decorations/ghost_tree"
+    },
+    {
+      "id": "sad_haunted_snack_shack",
+      "kind": "building",
+      "footprintTiles": [
+        5,
+        4
+      ],
+      "states": [
+        "construction",
+        "idle",
+        "lights_on"
+      ],
+      "fileStem": "buildings/haunted_snack_shack"
+    },
+    {
+      "id": "sad_vampire_bart",
+      "kind": "character_skin",
+      "ownerCharacter": "bart",
+      "states": [
+        "idle",
+        "walk",
+        "job"
+      ],
+      "fileStem": "characters/bart_vampire"
+    },
+    {
+      "id": "sad_event_plaque",
+      "kind": "decoration",
+      "footprintTiles": [
+        1,
+        1
+      ],
+      "states": [
+        "idle"
+      ],
+      "fileStem": "decorations/event_plaque"
+    }
+  ],
+  "integration": {
+    "state": "not-integrated",
+    "requirements": [
+      "create sprites and animations from permitted references",
+      "map objects to actual game asset definitions",
+      "connect quest and timer logic to native save/load and UI",
+      "test offline and restart persistence on Android"
+    ],
+    "note": "Tile footprints are design placeholders. No actual sprite files or APK changes are included."
+  }
+}
