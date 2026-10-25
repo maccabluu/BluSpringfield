@@ -1,0 +1,190 @@
+{
+  "pack": "bluspringfield.springfield_after_dark",
+  "version": "0.1.0",
+  "status": "prototype-not-integrated",
+  "progressRule": "Only one active quest at a time. Task counts accumulate during the active event. Collect threshold counts cumulative earned candy.",
+  "quests": [
+    {
+      "id": "sad_01",
+      "title": "A Night to Forget",
+      "dialogue": [
+        {
+          "speaker": "homer",
+          "text": "I put the emergency Halloween candy somewhere safe. In my stomach."
+        },
+        {
+          "speaker": "lisa",
+          "text": "Dad, Springfield is filling up with ghosts. We have bigger problems."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "complete_job",
+          "target": "homer_decorations",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "candy": 25,
+        "xp": 25
+      },
+      "next": "sad_02"
+    },
+    {
+      "id": "sad_02",
+      "title": "Ghosts on Evergreen Terrace",
+      "dialogue": [
+        {
+          "speaker": "bart",
+          "text": "If those ghosts are fake, why did one steal my skateboard?"
+        },
+        {
+          "speaker": "homer",
+          "text": "Maybe it needed a faster getaway."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "complete_job",
+          "target": "bart_trick_or_treat",
+          "count": 1
+        },
+        {
+          "type": "tap",
+          "target": "wandering_ghost",
+          "count": 3
+        }
+      ],
+      "rewards": {
+        "candy": 35,
+        "xp": 40
+      },
+      "next": "sad_03"
+    },
+    {
+      "id": "sad_03",
+      "title": "A Fright for Flanders",
+      "dialogue": [
+        {
+          "speaker": "flanders",
+          "text": "Okily-dokily! Was that a floating bedsheet outside my window?"
+        },
+        {
+          "speaker": "bart",
+          "text": "Only one way to find out."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "complete_job",
+          "target": "flanders_watch",
+          "count": 1
+        },
+        {
+          "type": "place",
+          "target": "sad_jack_o_lantern",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "candy": 50,
+        "xp": 50
+      },
+      "next": "sad_04"
+    },
+    {
+      "id": "sad_04",
+      "title": "The Science of Scaring",
+      "dialogue": [
+        {
+          "speaker": "lisa",
+          "text": "The town needs evidence, not more rumours."
+        },
+        {
+          "speaker": "homer",
+          "text": "Evidence tastes worse than candy."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "complete_job",
+          "target": "lisa_science",
+          "count": 1
+        },
+        {
+          "type": "reach_candy",
+          "target": "event_candy",
+          "count": 200
+        }
+      ],
+      "rewards": {
+        "candy": 65,
+        "xp": 65
+      },
+      "next": "sad_05"
+    },
+    {
+      "id": "sad_05",
+      "title": "Cobwebs and Chaos",
+      "dialogue": [
+        {
+          "speaker": "marge",
+          "text": "If everyone insists on a Halloween festival, somebody needs to organise it."
+        },
+        {
+          "speaker": "homer",
+          "text": "I volunteer to taste-test every sweet."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "complete_job",
+          "target": "marge_stall",
+          "count": 1
+        },
+        {
+          "type": "claim_prize",
+          "target": "reward_02",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "candy": 80,
+        "xp": 70
+      },
+      "next": "sad_06"
+    },
+    {
+      "id": "sad_06",
+      "title": "Springfield After Dark",
+      "dialogue": [
+        {
+          "speaker": "bart",
+          "text": "Now this looks like a proper haunted Springfield!"
+        },
+        {
+          "speaker": "lisa",
+          "text": "It looks more like somebody forgot to turn the streetlights on."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "tap",
+          "target": "wandering_ghost",
+          "count": 10
+        },
+        {
+          "type": "place",
+          "target": "sad_ghost_tree",
+          "count": 1
+        }
+      ],
+      "rewards": {
+        "candy": 125,
+        "xp": 100,
+        "itemId": "sad_event_plaque"
+      },
+      "next": null
+    }
+  ]
+}
