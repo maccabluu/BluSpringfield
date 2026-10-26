@@ -1,0 +1,639 @@
+{
+  "id": "bluspringfield.springfield_after_dark.scooby_crossover",
+  "version": "0.2.0-design",
+  "status": "design-not-integrated",
+  "scope": "28-day four-act event expansion; outdoor Springfield only; original objects and save must be retained",
+  "baseEvent": "bluspringfield.springfield_after_dark",
+  "baseEventVersion": "0.1.0",
+  "chapters": {
+    "prologue": "Retain existing six Springfield After Dark quests as optional introduction, not required for crossover progression",
+    "acts": [
+      {
+        "number": 1,
+        "title": "The Mystery Machine Arrives",
+        "days": "Days 1–7",
+        "setting": "Evergreen Terrace and the temporary Mystery Inc. camp",
+        "summary": "A mysterious green van rolls into Springfield while flickering pumpkins and runaway ghosts frighten Homer. The gang sets up a temporary investigation base.",
+        "quests": [
+          [
+            "cross_01",
+            "Strangers on Evergreen Terrace",
+            "Homer",
+            "Inspect Halloween decorations; place one glowing pumpkin",
+            "Mystery Machine, placeable vehicle"
+          ],
+          [
+            "cross_02",
+            "Like, Zoinks!",
+            "Shaggy and Scooby",
+            "Collect 5 wandering ghosts; send Homer on a 1-hour candy search",
+            "Playable Shaggy and Scooby"
+          ],
+          [
+            "cross_03",
+            "Jinkies at Midnight",
+            "Lisa and Velma (visiting NPC)",
+            "Collect 3 clue drops; have Lisa research footprints",
+            "Mystery Clue Board decoration"
+          ],
+          [
+            "cross_04",
+            "A Trap That Almost Works",
+            "Bart, Shaggy and Scooby",
+            "Complete Bart's prank job; place 3 cobweb fences",
+            "Spooky Streetlamp decoration"
+          ],
+          [
+            "cross_05",
+            "The House With Glowing Windows",
+            "Homer, Shaggy and Scooby",
+            "Investigate two nearby houses; earn 250 total candy",
+            "Haunted Simpsons House exterior variant"
+          ]
+        ]
+      },
+      {
+        "number": 2,
+        "title": "The Schoolhouse Ghoul",
+        "days": "Days 8–14",
+        "setting": "Springfield Elementary and its outdoor playground",
+        "summary": "A bell rings from the empty school and a masked ghoul appears. A smaller prank is exposed, but the real Phantom slips away.",
+        "quests": [
+          [
+            "cross_06",
+            "The Bell That Rings Alone",
+            "Lisa and Bart",
+            "Examine the school bell; collect 4 clue drops",
+            "Broken Bell decoration"
+          ],
+          [
+            "cross_07",
+            "Footprints in the Playground",
+            "Shaggy and Scooby",
+            "Follow glowing footprints; catch 6 ghosts",
+            "Glowing Paw Prints decoration"
+          ],
+          [
+            "cross_08",
+            "Fred's Excellent Trap",
+            "Fred and Daphne (visiting NPCs)",
+            "Place a trap net; complete a trap-preparation job",
+            "Playable Fred and Daphne"
+          ],
+          [
+            "cross_09",
+            "School's Out, Ghosts In",
+            "Lisa, Fred and Daphne",
+            "Complete two school investigations; place a fog machine",
+            "Haunted Springfield Elementary exterior variant"
+          ],
+          [
+            "cross_10",
+            "The First Unmasking",
+            "Bart and Mystery Inc.",
+            "Complete the playground chase; find 5 clue drops",
+            "Spectral Milhouse costume and 150 candy"
+          ]
+        ]
+      },
+      {
+        "number": 3,
+        "title": "The Reactor Riddle",
+        "days": "Days 15–21",
+        "setting": "Nuclear Power Plant, cooling towers and surrounding streets",
+        "summary": "The gang traces strange footprints, glowing slime and mechanical noises to the Power Plant. Lisa finds evidence of remote-controlled ghosts.",
+        "quests": [
+          [
+            "cross_11",
+            "Nuclear Nightmares",
+            "Homer and Lisa",
+            "Investigate the Power Plant exterior; find 4 clues",
+            "Reactor Warning Sign decoration"
+          ],
+          [
+            "cross_12",
+            "The Velma Equation",
+            "Velma and Lisa",
+            "Complete Lisa's research job; inspect 2 slime puddles",
+            "Playable Velma"
+          ],
+          [
+            "cross_13",
+            "Scooby-Doo, Where'd You Go?",
+            "Scooby and Shaggy",
+            "Catch 10 roaming ghosts; finish a Scooby chase job",
+            "Scooby Snack Cart building"
+          ],
+          [
+            "cross_14",
+            "Trouble in the Cooling Towers",
+            "Daphne and Fred",
+            "Place 2 glowing barrels; set 2 outdoor traps",
+            "Haunted Reactor exterior variant"
+          ],
+          [
+            "cross_15",
+            "The Phantom's Signal",
+            "Velma and Lisa",
+            "Collect 8 clues; investigate a ghost drone",
+            "Phantom Signal Antenna decoration and 200 candy"
+          ]
+        ]
+      },
+      {
+        "number": 4,
+        "title": "The Phantom of Springfield",
+        "days": "Days 22–28",
+        "setting": "Abandoned Krustylu backlot and the Phantom's stage",
+        "summary": "The gang traps a masked figure after tracing the mechanical ghosts to a deserted film set. Mr. Burns is exposed as the mastermind of a scare scheme.",
+        "quests": [
+          [
+            "cross_16",
+            "The Old Backlot",
+            "Fred and Daphne",
+            "Build the outdoor Phantom Backlot; inspect 3 props",
+            "Phantom Backlot building"
+          ],
+          [
+            "cross_17",
+            "Five Scooby Snacks and a Plan",
+            "Shaggy and Scooby",
+            "Collect 5 snack drops; craft 3 trap parts",
+            "Mystery Inc. Trap Workshop building"
+          ],
+          [
+            "cross_18",
+            "Operation Unmask",
+            "Fred, Daphne, Velma and Lisa",
+            "Place 3 traps; complete a 4-hour decoy job",
+            "Unmasking Stage decoration"
+          ],
+          [
+            "cross_19",
+            "The Phantom Chase",
+            "Homer, Bart, Scooby and Shaggy",
+            "Win three non-combat ghost-trap phases",
+            "Phantom Costume for Mr. Burns"
+          ],
+          [
+            "cross_20",
+            "And I Would Have Gotten Away With It...",
+            "Whole cast",
+            "Read final unmask dialogue; place the commemorative Mystery Plaque",
+            "Mystery Inc. Detective Office and event completion"
+          ]
+        ]
+      }
+    ]
+  },
+  "narrative": {
+    "title": "Springfield After Dark: The Mystery Inc. Files",
+    "premise": "An unexplained haunting draws Mystery Inc. to Springfield. A string of fake ghosts conceals Mr. Burns' scheme to frighten the neighbourhood away from a newly valuable site. A mysterious floating donut remains unexplained after the unmasking.",
+    "antagonists": [
+      "Milhouse in a ghost costume (Act 2 red herring)",
+      "Mr. Burns as the Phantom (Act 4 reveal)"
+    ],
+    "style": "family-friendly mystery and light Simpsons comedy"
+  },
+  "progression": {
+    "eventDays": 28,
+    "start": "player starts event locally",
+    "actFlow": "sequential quest unlocks, not locked to real calendar weeks",
+    "currency": "event_candy",
+    "currencyRule": "cumulative earned; milestone prizes never deduct currency",
+    "mysteryClues": "quest progress items, not paid currency",
+    "tappable": "ghosts and clue drops, spawn rate limited",
+    "dailyBonus": 50,
+    "permanentRewards": true,
+    "offlineFirst": true,
+    "saveMigration": "Namespace v0.2 under event ID; do not overwrite v0.1 or core game save"
+  },
+  "counts": {
+    "acts": 4,
+    "mainQuests": 20,
+    "playableScoobyCharacters": 5,
+    "costumes": 3,
+    "buildingConcepts": 10,
+    "decorationConcepts": 26
+  },
+  "characters": [
+    {
+      "id": "cross_scooby",
+      "name": "Scooby-Doo",
+      "unlock": "cross_02",
+      "role": "Roaming character",
+      "animation": [
+        "stand",
+        "walk four directions",
+        "sniff",
+        "run scared",
+        "eat snack",
+        "tail wag",
+        "tap reaction"
+      ],
+      "reuse": "new animal sprites mandatory; possible reuse of timing/state framework only"
+    },
+    {
+      "id": "cross_shaggy",
+      "name": "Shaggy Rogers",
+      "unlock": "cross_02",
+      "role": "Roaming character",
+      "animation": [
+        "idle",
+        "walk",
+        "run",
+        "eat",
+        "scared",
+        "trap distraction"
+      ],
+      "reuse": "adapt humanoid movement timing, redraw frames"
+    },
+    {
+      "id": "cross_fred",
+      "name": "Fred Jones",
+      "unlock": "cross_08",
+      "role": "Roaming character",
+      "animation": [
+        "idle",
+        "walk",
+        "inspect",
+        "set trap",
+        "run"
+      ],
+      "reuse": "adapt humanoid timing and generic trap/interaction effects"
+    },
+    {
+      "id": "cross_daphne",
+      "name": "Daphne Blake",
+      "unlock": "cross_08",
+      "role": "Roaming character",
+      "animation": [
+        "idle",
+        "walk",
+        "investigate",
+        "decoy",
+        "run"
+      ],
+      "reuse": "adapt humanoid timing, redraw frames"
+    },
+    {
+      "id": "cross_velma",
+      "name": "Velma Dinkley",
+      "unlock": "cross_12",
+      "role": "Roaming character",
+      "animation": [
+        "idle",
+        "walk",
+        "inspect clue",
+        "find glasses",
+        "run"
+      ],
+      "reuse": "adapt humanoid timing, redraw frames"
+    },
+    {
+      "id": "cross_spectral_milhouse",
+      "name": "Spectral Milhouse",
+      "unlock": "cross_10",
+      "role": "Costume/skin",
+      "animation": [
+        "idle",
+        "walk",
+        "nervous gesture"
+      ],
+      "reuse": "possible Milhouse base sprite state set if a compatible authorised reference exists"
+    },
+    {
+      "id": "cross_phantom_burns",
+      "name": "The Phantom (Mr. Burns)",
+      "unlock": "cross_19",
+      "role": "Costume/skin",
+      "animation": [
+        "hover illusion",
+        "idle",
+        "walk",
+        "unmask"
+      ],
+      "reuse": "possible existing Burns sprite states plus overlaid costume, engine support unverified"
+    },
+    {
+      "id": "cross_ghost_hunter_homer",
+      "name": "Ghost Hunter Homer",
+      "unlock": "optional side-task",
+      "role": "Costume/skin",
+      "animation": [
+        "idle",
+        "walk",
+        "inspect",
+        "eat candy"
+      ],
+      "reuse": "possible Homer base sprite states with new props"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "cross_mystery_machine",
+      "name": "The Mystery Machine",
+      "artMethod": "new van sprite; base shape reference only",
+      "candidateBase": "existing vehicle base to inspect (geometry may not suit the van)",
+      "safety": "Use new event object ID; original in-game object unchanged",
+      "animation": "headlight flash and door open"
+    },
+    {
+      "id": "cross_haunted_simpsons_house",
+      "name": "Haunted Simpsons House",
+      "artMethod": "clone authorised geometry/footprint, redraw façade or recolour",
+      "candidateBase": "Simpsons House geometry as a separate variant",
+      "safety": "Use new event object ID; original in-game object unchanged",
+      "animation": "flickering windows and chimney smoke anchored to chimney"
+    },
+    {
+      "id": "cross_haunted_school",
+      "name": "Haunted Springfield Elementary",
+      "artMethod": "clone authorised geometry/footprint, redraw façade or recolour",
+      "candidateBase": "Springfield Elementary geometry as a separate variant",
+      "safety": "Use new event object ID; original in-game object unchanged",
+      "animation": "flickering bell/window light"
+    },
+    {
+      "id": "cross_haunted_reactor",
+      "name": "Haunted Reactor",
+      "artMethod": "clone authorised geometry/footprint, redraw façade or recolour",
+      "candidateBase": "Nuclear Power Plant silhouette/roofline as a separate variant",
+      "safety": "Use new event object ID; original in-game object unchanged",
+      "animation": "reactor window pulse and low smoke"
+    },
+    {
+      "id": "cross_phantom_backlot",
+      "name": "Phantom Backlot",
+      "artMethod": "clone authorised geometry/footprint, redraw façade or recolour",
+      "candidateBase": "Krustylu Studio geometry as a separate variant",
+      "safety": "Use new event object ID; original in-game object unchanged",
+      "animation": "stage lamps and fog"
+    },
+    {
+      "id": "cross_scooby_cart",
+      "name": "Scooby Snack Cart",
+      "artMethod": "clone authorised geometry/footprint, redraw façade or recolour",
+      "candidateBase": "an existing exterior stall as a base",
+      "safety": "Use new event object ID; original in-game object unchanged",
+      "animation": "steam and serving hatch"
+    },
+    {
+      "id": "cross_trap_workshop",
+      "name": "Mystery Inc. Trap Workshop",
+      "artMethod": "clone authorised geometry/footprint, redraw façade or recolour",
+      "candidateBase": "an existing small shed/workshop as a base",
+      "safety": "Use new event object ID; original in-game object unchanged",
+      "animation": "subtle light/prop loop"
+    },
+    {
+      "id": "cross_detective_office",
+      "name": "Mystery Inc. Detective Office",
+      "artMethod": "clone authorised geometry/footprint, redraw façade or recolour",
+      "candidateBase": "an existing storefront as a base",
+      "safety": "Use new event object ID; original in-game object unchanged",
+      "animation": "subtle light/prop loop"
+    },
+    {
+      "id": "sad_haunted_snack_shack",
+      "name": "Haunted Snack Shack",
+      "artMethod": "finish existing concept",
+      "candidateBase": "existing v0.1 concept; look for compatible food kiosk",
+      "safety": "Use new event object ID; original in-game object unchanged",
+      "animation": "subtle light/prop loop"
+    },
+    {
+      "id": "cross_costume_shop",
+      "name": "Abandoned Costume Shop",
+      "artMethod": "clone authorised geometry/footprint, redraw façade or recolour",
+      "candidateBase": "an existing shopfront or boarded-up store",
+      "safety": "Use new event object ID; original in-game object unchanged",
+      "animation": "subtle light/prop loop"
+    }
+  ],
+  "decorations": [
+    {
+      "id": "sad_jack_o_lantern",
+      "name": "Glowing Pumpkin",
+      "animation": "small sprite loop or effect",
+      "sourceCandidate": "existing Springfield After Dark v0.1 design"
+    },
+    {
+      "id": "sad_cobweb_fence",
+      "name": "Cobweb Fence",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "existing Springfield After Dark v0.1 design"
+    },
+    {
+      "id": "sad_ghost_tree",
+      "name": "Ghost Tree",
+      "animation": "small sprite loop or effect",
+      "sourceCandidate": "existing Springfield After Dark v0.1 design"
+    },
+    {
+      "id": "sad_event_plaque",
+      "name": "Mystery Plaque",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "existing Springfield After Dark v0.1 design"
+    },
+    {
+      "id": "cross_deco_05",
+      "name": "Candy Cauldron",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_06",
+      "name": "Spooky Streetlamp",
+      "animation": "small sprite loop or effect",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_07",
+      "name": "Fog Machine",
+      "animation": "small sprite loop or effect",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_08",
+      "name": "Mystery Inc. Sign",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_09",
+      "name": "Crime Scene Tape",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_10",
+      "name": "Mystery Clue Board",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_11",
+      "name": "Evidence Marker",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_12",
+      "name": "Dropped Scooby Snacks",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_13",
+      "name": "Glowing Paw Prints",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_14",
+      "name": "Coffin Prop",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_15",
+      "name": "Slime Puddle",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_16",
+      "name": "Haunted Tombstone",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_17",
+      "name": "Monster Footprints",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_18",
+      "name": "Broken School Bell",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_19",
+      "name": "Haunted School Banner",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_20",
+      "name": "Flickering Porch Lamp",
+      "animation": "small sprite loop or effect",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_21",
+      "name": "Mechanical Ghost Drone",
+      "animation": "small sprite loop or effect",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_22",
+      "name": "Reactor Warning Barrel",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_23",
+      "name": "Reactor Warning Sign",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_24",
+      "name": "Trap Net",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_25",
+      "name": "Unmasking Stage",
+      "animation": "static or single tap feedback",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    },
+    {
+      "id": "cross_deco_26",
+      "name": "Phantom Signal Antenna",
+      "animation": "small sprite loop or effect",
+      "sourceCandidate": "candidate reuse from existing authorised decoration geometry, pending asset inspection"
+    }
+  ],
+  "reusedVisualRules": [
+    "Clone permitted source asset into a separate event item ID",
+    "Preserve source sprite atlases and native object data intact",
+    "Retain collision footprint only after comparing to native grid",
+    "Adapt animation timing/effect emitters only after native loader format is known",
+    "Human walk timing may be reused; new Scooby quadruped frames need separate artwork",
+    "Check effect anchor points such as chimney smoke and vehicle exhaust in-game",
+    "Do not assume APK PNGs load directly; inspect atlas/resource bundle requirements"
+  ],
+  "milestones": [
+    {
+      "atCandy": 50,
+      "itemId": "sad_jack_o_lantern"
+    },
+    {
+      "atCandy": 150,
+      "itemId": "sad_cobweb_fence"
+    },
+    {
+      "atCandy": 300,
+      "itemId": "sad_ghost_tree"
+    },
+    {
+      "atCandy": 600,
+      "itemId": "sad_haunted_snack_shack"
+    },
+    {
+      "atCandy": 900,
+      "itemId": "sad_vampire_bart"
+    },
+    {
+      "atCandy": 1200,
+      "itemId": "cross_deco_07"
+    },
+    {
+      "atCandy": 1600,
+      "itemId": "cross_costume_shop"
+    },
+    {
+      "atCandy": 2200,
+      "itemId": "cross_haunted_reactor"
+    },
+    {
+      "atCandy": 3000,
+      "itemId": "cross_deco_25"
+    },
+    {
+      "atCandy": 4000,
+      "itemId": "cross_haunted_school"
+    }
+  ],
+  "openQuestions": [
+    "Current game cache/master files unavailable in provided APK and assets.zip",
+    "Existing character walking sprite format, animation timelines and effects have not been verified",
+    "Native event identifiers and reward/save hooks unknown",
+    "Official rights for redistribution of licensed crossover content require confirmation prior to public release"
+  ],
+  "QA": [
+    "Proof of concept: add one new stand-alone building, retaining its original source building",
+    "Smoke must originate from the correct roof/chimney in every applicable frame",
+    "Inspect sprite pivot/alignment, footprint and tap hit area",
+    "Verify character walk/idle loops do not jump between frames",
+    "Restart BlueStacks and confirm reward unlock and item placement survive",
+    "Verify save migration, timers, clock changes, event expiry and storage limits",
+    "Verify signing certificate matches installed Homer app before offering an in-place update"
+  ],
+  "deliverable": "Planning data only: no modified native game binaries, character sprites or playable APK"
+}
